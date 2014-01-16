@@ -1,0 +1,636 @@
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: "Microsoft YaHei", 微软雅黑, "SimSun", Arial, Lucida Grande, Tahoma, sans-serif;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+  text-align: center;
+  font-family: Helvetica, Arial, 'Hiragino Sans GB', STHeiti, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  min-width: 320px;
+}
+
+a {
+  color: #2c3035;
+  text-decoration: none;
+}
+a:hover{
+  color: #e5744e;
+}
+
+img { max-width: 100%; }
+
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/*
+ * Global Nav, will be sticky when scrolling down.
+ */
+
+.global-nav {
+  background-color: #fff;
+  padding: 10px 0;
+  position: relative;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+     -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+}
+.global-nav ul { margin: 0; padding: 0; }
+.global-nav ul li {
+  display: inline;
+}
+.global-nav ul li a {
+  padding: 10px 3%;
+  font-size: 20px;
+  color: #777;
+  text-decoration: none;
+}
+.global-nav ul li a.btn {
+  color: #fff;
+  margin-left: 3%;
+}
+.global-nav ul li a.btn:hover {
+  color: #fff;
+  background-color: #;
+}
+.global-nav ul li a:hover {
+  color: #e5744e;
+}
+.global-nav ul li.active a {
+  background-color: #555;
+  color: #eee;
+}
+
+.members-list {
+  margin: 0;
+  padding: 0;
+}
+.members-list li {
+  list-style: none;
+  float: left;
+  width: 25%;
+  margin-bottom: 40px;
+}
+.members-list figure img {
+  width: 80%;
+  max-width: 100%;
+}
+.members-list h3 {
+  padding-top: 4px;
+  padding-right: 42px;
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: #EC2E52;
+  margin: 8px 0 0;
+}
+.members-list p {
+  font-size: .9em;
+  color: #777;
+  margin: 0;
+}
+.members-list p a {
+  color: #777;
+}
+.members-list p a:hover {
+  color: #e5744e;
+}
+
+.wrap {
+  padding: 60px 10px;
+  border-bottom: 1px solid #ccc;
+  background-color: #F5F5F5;
+  background-image: -moz-linear-gradient(top, #EEE 0%, #F5F5F5 15%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#EEE), color-stop(15%,#F5F5F5));
+  background-image: -webkit-linear-gradient(top, #EEE 0%,#F5F5F5 15%);
+  background-image: -o-linear-gradient(top, #EEE 0%,#F5F5F5 15%);
+  background-image: -ms-linear-gradient(top, #EEE 0%,#F5F5F5 15%);
+  background-image: linear-gradient(to bottom, #EEE 0%,#F5F5F5 15%);
+}
+.wrap header {
+  margin-bottom: 60px;
+  font-size: 1.2em;
+  color: #555;
+}
+.wrap header h2 {
+  color: #444;
+}
+.wrap > p {
+  color: #888;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+.hero {
+  background-color: #2c3035;
+  background-image: url("/assets/rainyday.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  padding: 60px 0 40px 0;
+  margin: 0 auto;
+  color: white;
+}
+.hero > figure { margin-bottom: 55px; padding: 0 10px;}
+.hero > figure img { margin-left: 15px; }
+.hero h1 {
+  font-size: 4em;
+  line-height: 1.2;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  margin: .55em 0;
+  display: none;
+  /*color: rgba(255,255,255,.75);*/
+}
+
+.hero h2 {
+  font-size: 35px;
+  font-weight: normal;
+  line-height: 1.5;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  width: 300px;
+  padding: 5px 0;
+  margin: 20px auto;
+  /*color: rgba(255,255,255,.75);*/
+}
+
+.about > p {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: left;
+  color: #888;
+  font-size: 18px;
+  line-height: 28px;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+
+
+.footer {
+  color: #666;
+  border: none;
+  background: #2c3035;
+  padding: 80px 0 20px;
+}
+.footer .container { max-width: 820px; }
+.footer header {
+  position: relative;
+  border-bottom: 1px solid #494949;
+  margin: 0;
+}
+.footer header h2 {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  color: #666;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 30px;
+  width: 220px;
+  margin: 0 0 0 -110px;
+  background-color: #2c3035;
+}
+.footer a {
+  color: #666;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #d2d2d2;
+}
+.footer .credits {
+  border-bottom: 1px solid #494949;
+  padding: 40px 0 10px;
+}
+.footer .credits li {
+  list-style: none;
+  display: inline;
+  display: inline-block;
+  font-size: 20px;
+  min-width: 270px;
+}
+.footer .credits li p { margin: 30px auto; }
+.footer .social a{
+  display: inline;
+  display: inline-block;
+  line-height: 35px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin: 40px 20px 10px;
+  -webkit-transition: background-color 0.15s linear;
+     -moz-transition: background-color 0.15s linear;
+       -o-transition: background-color 0.15s linear;
+          transition: background-color 0.15s linear;
+}
+.footer .social a:hover {
+  background-color: #d2d2d2;
+}
+.footer .copyright {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: #EC2E52;
+  color: #fff;
+  font-size: 24px;
+  font-weight: normal;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #e5744e;
+}
+
+.cta a { margin-bottom: 5px; }
+
+.cta small {
+  color: #999;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 5px;
+}
+
+/* Affix */
+.affix {
+  position: fixed;
+  top: 0;
+  z-index: 1099;
+  width: 100%;
+  background-color: rgba(255,255,255,.95);
+}
+
+
+
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+
+@media (max-width: 1680px) {
+  .hero { background-size: inherit; }
+}
+
+@media (max-width: 1300px) {
+  #sponsors-details ul li { width: 50%; }
+}
+
+@media (max-width: 960px) {
+  .sponsors ul li:first-child { display: block; }
+  #sponsors-details .container { width: 100%; }
+  #sponsors-details .sponsors-platinum ul li { width: 100%; }
+  #sponsors-details ul li:first-child { display: inline-block;}
+  .members-list li { font-size: .8em; }
+  .schedule-table { float: none; width: 100%; }
+}
+
+@media (max-width: 640px) {
+  .global-nav ul li a { font-size: 16px; padding: 5px;}
+  #sponsors-details ul li { max-width: none !important; width: 100%; }
+  .members-list li { width: 50%; }
+  .members-list li:nth-child(odd) { clear: left; }
+  .venue .address {
+    background-color: rgba(0,0,0,.2);
+    padding: 10px;
+    float: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .global-nav ul li a.btn {
+    display: block;
+    margin: 10px auto 0;
+    max-width: 300px;
+  }
+  .hero > figure img { margin-left: auto; }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  [class^="icon-"],
+  [class*=" icon-"] {
+    background-image: url("/img/sprite@2x.png");
+    -moz-background-size: 400px 400px;
+    -ie-background-size: 400px 400px;
+    -o-background-size: 400px 400px;
+    -webkit-background-size: 400px 400px;
+    background-size: 400px 400px;
+  }
+}
+
+.hero img {
+border-radius: 80px;
+padding: 3;
+background-color: #d9d9d9;
+margin-top: 1.1em;
+}
+
+#members img {
+border-radius: 120px;
+padding: 3;
+background-color: #d9d9d9;
+margin-top: 1.1em;
+}
+
+#members img:hover {
+  border-color: #c3ca7d;
+  -webkit-box-shadow: 0 0 10px #529f86;
+}
+
+.work {
+width: 100%;
+min-height: 130px;
+display: block;
+clear: both;
+} 
+.work .intro {
+margin: 5px 10px 5px 0px;
+width: 100%;
+}
+
+.work img {
+width: 150px;
+height: 150px;
+float: left;
+background-color: white;
+padding: 5px;
+border-radius: 5px;
+border: 1px solid #dedede;
+margin: -5px 10px 5px 0px;
+
+}
+.work img:hover {
+  border-color: #c3ca7d;
+-webkit-box-shadow: 0 0 10px #529f86;
+text-decoration: none;
+}
+
+.work .intro ul {
+list-style: none;
+margin-left: 0;
+}
+
+.work .intro ul li {
+line-height: 20px;
+margin-bottom: 6px;
+}
+
+.work .intro ul a {
+  color: pink;
+}
+.work .intro ul a:hover {
+  color: red;
+}
+
+li {
+display: list-item;
+text-align: left;
+}
+
+.work .intro ul li:first-child {
+font-size: 20px;
+padding-bottom: 5px;
+margin-bottom: 10px;
+border-bottom: 1px #ccc solid;
+}
+
+
+.middle {
+  width:  800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.recruit .container {
+  width: 800px;
+}
+
+.recruit ul {
+  list-style: none;
+}
+
+.recruit .why_text {
+  width: 50%;
+  float: left;
+  display: block;
+}
+
+.recruit .why_text li{
+  margin: 10px; 
+}
+
+.recruit .r_img {
+  display: block;
+}
+
+.form {
+  margin: 0 auto;
+  width: 600px;
+  border: 1px #ccc solid;
+}
+
+.form-group {
+  padding-bottom: 20px;
+}
+
+.form .component {
+  margin: 0 auto;
+  width: 400px;
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+
+.form .component label {
+  float: left;
+vertical-align: bottom;
+padding-top: 5px;
+  width: 100px;
+}
+
+.form legend {
+  color: #008c7e;
+}
+
+.form h4 {
+  color: #008c7e;
+}
+
+.a_login {
+  font-size: 20px;
+  color: #008c7e;
+}
+
+.header_login {
+  height: 40px;
+  background-color: #fff;
+  padding: 1px 0;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+     -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+}
+
+.header_login .h_button {
+  float: right;
+  display: inline-block;
+  font-weight: normal;
+  color: #fff;
+  margin-top: 6px;
+  margin-bottom: 8px;
+  margin-right: 3%;
+  padding: 3px 12px 3px 12px;
+  box-shadow: 0 1px 0 white;
+  background-color: #EC2E52;
+  border-radius: 3px;
+}
+
+.header_login a:hover{
+  background-color: #e5744e;
+}
+
+.text_field_280 {
+  width: 280px;
+}
+#notice {
+  padding: 15px 10px;
+}
