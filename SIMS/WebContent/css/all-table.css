@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/**
+ * @authors Tomastong (tobeyourhero@qq.com)
+ * @date    2014-06-21 14:43:41
+ * @version $Id$
+ */
+ .form-table, .easy-table{
+ 	margin: 20px 30px;
+ }
+ .easy-table th, .easy-table td{
+	width: 80px;
+	text-align: center;
+}
+ .easy-table .weird{
+	width: 180px;	
+ }
+ .form-table th, .form-table td{
+ 	padding-left: 20px;
+ }
+ .form-table textarea{
+	resize: none;
+	width: 500px;
+ }
+.form-table input{
+	width: 300px;
+}
+.adjust-td{
+	width:50px;
+}
+.content-layout td{
+	text-align: left;
+	width: 120px;
+	line-height: 1.5em;
+}
+input.minish{
+	width: 180px;
+}
+.teacher-data-table{
+	margin: 20px 30px; 
+	width: 500;
+}
+.teacher-data-table td{
+	width: 100px;
+	line-height: 1.5em;
+}
+.teacher-data-table .course-content-td{
+	max-width: 200px;
+	overflow: auto;
+}

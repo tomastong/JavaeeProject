@@ -1,0 +1,199 @@
+@charset"UTF-8";
+
+/**
+ * 
+ * @authors Tomastong (tobeyourhero@qq.com)
+ * @date    2014-04-15 15:24:05
+ * @version $Id$
+ */
+ #body {
+    background-color: #46A3FF;
+}
+.div-header {
+    width: 600px;
+    border-bottom: 1px solid #ccc;
+    margin-top: -10px;
+    margin-bottom:15px;
+    text-align: center;
+}
+h2, h3, h4{
+    font-weight: bold;
+}
+h3{
+    background-color: #bfe5d5;
+}
+.form-control {
+    width: 200px;
+}
+.form-horizontal {
+    background-color: #ECF5FF;
+    border: 1px solid;
+    width: 602px;
+    height: 330px;
+    margin: 200px auto;
+    padding-top: 10px;
+    padding-right: 80px;
+    border-radius: 5px;
+    border-color: #ccc;
+}
+.form-horizontal {
+    /* IE10 */
+    background-image: -ms-linear-gradient(top left, #1E5799 14%, #FFFFFF 100%);
+    /* Mozilla Firefox */
+    background-image: -moz-linear-gradient(top left, #1E5799 14%, #FFFFFF 100%);
+    /* Opera */
+    background-image: -o-linear-gradient(top left, #1E5799 14%, #FFFFFF 100%);
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #FFFFFF), color-stop(1, #00A3EF));
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-linear-gradient(top left, #1E5799 14%, #FFFFFF 100%);
+    /* Proposed W3C Markup */
+    background-image: linear-gradient(top left, #1E5799 14%, #FFFFFF 100%);
+    /* Webkit (Safari/Chrome) */
+    -webkit-box-shadow: 16px 14px 5px 5px #003D79;
+    /* Mozilla Firefox */
+    -moz-box-shadow: 16px 14px 5px 5px #003D79;
+    /* Proposed W3C Markup */
+    box-shadow: 16px 14px 5px 5px #003D79;
+}
+#panel-64087 {
+    width:130px;
+    text-align: center;
+}
+#menu {
+    margin-left: 40px;
+    margin-top: 100px;
+}
+#tophead {
+    margin:0px;
+    height:68px;
+    background-color: #46A3FF;
+    box-shadow:0px 0px 10px black;
+}
+#tophead > h2 {
+    padding:20px 0px 0px 100px;
+    margin:0px;
+    width:100%;
+    font-weight:bold;
+}
+.disfontsize {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+#systime {
+    margin-left: 300px;
+}
+.table {
+    margin:20px auto 30px 10px;
+    max-width:1100px;
+    font-size: 15px;
+    border-spacing:0px;
+}
+
+.table, .table th {
+    text-align: center;
+    vertical-align: middle;
+}
+table tr {
+    height:20px;
+}
+table tr:nth-child(odd) {
+    background-color:#d9edf7;
+}
+table tr:nth-child(even) {
+    background-color:#f5f5f5;
+}
+.menu-head {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 30px;
+    cursor: pointer;
+    width:160px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.menu-Options {
+    border: 3px solid blue;
+    padding-left: 10px;
+    padding-right:10px;
+    font-size: 18px;
+    width:174px;
+    background-color: #d9edf7;
+    margin-bottom: 12px;
+    margin-left: 15px;
+}
+.menu-Options p > a {
+    padding: 10px 10px 10px 30px;
+}
+.menu-Options a, .table a, #page a {
+    text-decoration: none;
+}
+.menu-Options a:hover, .table a:hover, #page a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+p {
+    height: 10px;
+    margin-top: 5px;
+}
+.page a {
+    font-size: 20px;
+    margin-left: 170px;
+}
+.page {
+    margin-top: 0px;
+}
+header h2 {
+    text-align: center;
+    margin: 20px auto 10px auto;
+}
+#verifycode{
+	width:100px;
+	float: left;
+}
+#imgcode{
+	width:80px;
+	height:33px;
+	margin-left:10px;
+	float: left;
+}
+#photo-container, #avatar {
+    width: 120px;
+}
+#avatar {
+    height: 150px;
+}
+.zjform {
+    margin:20px auto 30px 10px;
+    padding-bottom: 10px; 
+    max-width:1100px;
+    border: 1px #ccc solid;
+}
+.component{
+    margin: 10px auto; 
+    height:50px;
+}
+input, textarea, select, label{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+#zjcontent{
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width: 800px;
+    resize: none;
+    position: relative;
+    left: 15px;
+}
+#score1, #score2, #score3, #score4, #score5{
+    margin: 10px auto;
+}
+#question p, #question h3{
+    padding-left: 20px;
+}
+#question input{
+    margin-left: 30px;
+}

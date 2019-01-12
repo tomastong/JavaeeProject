@@ -1,0 +1,32 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- 这里hibernate.cfg.xml存在的用途就只是生成表了，读取的放在spring中配置了（applicationContext-common.xml） -->
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sims</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">1</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+		
+		<mapping resource="cn/sims/domain/Admin.hbm.xml"/>
+		<mapping resource="cn/sims/domain/Student.hbm.xml"/>
+		<mapping resource="cn/sims/domain/ZhouJi.hbm.xml"/>
+		<mapping resource="cn/sims/domain/Post.hbm.xml"/>
+		<mapping resource="cn/sims/domain/Grade.hbm.xml"/>
+		<mapping resource="cn/sims/domain/Assistant.hbm.xml"/>
+		<mapping resource="cn/sims/domain/Course.hbm.xml"/>
+		<mapping resource="cn/sims/domain/Time.hbm.xml"/>
+		<mapping resource="cn/sims/domain/Classes.hbm.xml"/>
+		<mapping resource="cn/sims/domain/Teacher.hbm.xml"/>
+		<mapping resource="cn/sims/domain/Direction.hbm.xml"/>
+		<mapping resource="cn/sims/domain/InternshipDirection.hbm.xml"/>
+		<mapping resource="cn/sims/domain/Inform.hbm.xml"/>
+		<mapping resource="cn/sims/domain/Resources.hbm.xml"/>
+		
+	</session-factory>
+</hibernate-configuration>

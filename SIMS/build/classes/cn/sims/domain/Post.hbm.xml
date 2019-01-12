@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.sims.domain">
+	<class name="Post" table="sims_post">
+		<id name="id">
+			<generator class="native" />
+		</id>
+
+		<property name="title" column="title" type="string" />
+		<property name="descr" column="descr" type="text" />
+		<property name="createDate" column="createdate" type="date" />
+		 
+		<many-to-one name="student" column="studentid" class="Student"></many-to-one> 
+	</class>
+
+</hibernate-mapping>

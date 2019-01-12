@@ -1,0 +1,63 @@
+@charset"UTF-8";
+
+/**
+ * @authors Your Name (you@example.org)
+ * @date    2014-06-20 13:47:29
+ * @version $Id$
+ */
+ #person-detail, #poster-preview {
+    float: left;
+}
+#poster-preview {
+    margin-left: 50px;
+}
+.avatar {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+.table, .complex-table {
+    margin: auto auto auto 50px;
+    line-height: 1.5em;
+}
+.table td, .table th {
+    width: 140px;
+    text-align: center;
+}
+th.weird {
+    width: 160px;
+    text-align: center;
+}
+.form-table input, textarea {
+    width: 250px;
+    resize: none;
+}
+.post-desc {
+    width: 680px;
+    margin: auto 10px;
+    line-height: 1.5em;
+    word-break: break-all;
+}
+.avatar-box, .discuss-box, .button-box {
+    float:left;
+    margin: auto 8px;
+}
+.discuss-box {
+    width: 400px;
+    line-height: 1.5em;
+}
+.comment {
+    padding: 10px;
+}
+.post-desc {
+    margin-bottom: 10px;
+}
+.comment textarea {
+    width: 400px;
+    line-height: 1.5em;
+}
+.button-div {
+    margin: 10px;
+}
+

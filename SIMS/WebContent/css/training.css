@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2014-06-21 14:32:36
+ * @version $Id$
+ */
+.training-table{
+	margin: 20px 30px;
+	text-align: center;
+}
+.training-table th, .training-table td{
+	width: 100px;
+}

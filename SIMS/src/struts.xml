@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<!-- 一定要用这一项添加名为sturts.objectiveFactory的常量，把值设为spring，表示该Action由spring产生 -->
+	<constant name="struts.objectFactory" value="spring"></constant>
+	<!-- struts2大小限制 -->
+	<constant name="struts.multipart.maxSize" value="90000000"></constant>
+	<!-- 这里也可以不设定编码，随意，一般我喜欢设定为utf-8 -->
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<package name="default" namespace="/" extends="struts-default">
+		<interceptors>
+			<interceptor-stack name="uploadInterceptorStack">
+				<interceptor-ref name="fileUpload">
+				</interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<action name="loginAction" class="loginAction" method="dealLogin">
+			<result name="student" type="redirect">/XueSheng/studentAction_listInform</result>
+			<result name="assistant" type="redirect">/FuDaoYuan/assistantAction_listInform</result>
+			<result name="teacher" type="redirect">/JiaoShi/teacherAction_listRes</result>
+			<result name="admin" type="redirect">/GuanLiYuan/adminAction_listStudent?pageModel.pageNo=1</result>
+			<result name="error" type="dispatcher">/login.jsp</result>
+		</action>
+
+		<action name="studentAction_*" class="studentAction" method="{1}">
+			<result name="alterpwd" type="dispatcher">/XueSheng/alterpassword.jsp</result>
+			<result name="addzj" type="dispatcher">/XueSheng/writezj.jsp</result>
+			<result name="listzj" type="dispatcher">/XueSheng/internshipzj.jsp</result>
+			<result name="modzj" type="dispatcher">/XueSheng/alterzj.jsp</result>
+			<result name="seezj" type="dispatcher">/XueSheng/seezj.jsp</result>
+			<result name="listfile" type="dispatcher">/XueSheng/resourcedownload.jsp</result>
+			<result name="error" type="redirect">/XueSheng/index.jsp</result>
+			<result name="ownprofile" type="dispatcher">/XueSheng/personprofile.jsp</result>
+			<result name="listinform" type="dispatcher">/XueSheng/index.jsp</result>
+			<result name="seeinform" type="dispatcher">/XueSheng/seenews.jsp</result>
+			<result name="listdirections" type="dispatcher">/XueSheng/practicaltraining.jsp</result>
+			<result name="seedirection" type="dispatcher">/XueSheng/training-result.jsp</result>
+			<result name="addshixunclass" type="dispatcher">/XueSheng/index.jsp</result>
+			<result name="seeshixi" type="dispatcher">/XueSheng/internship-result.jsp</result>
+			
+			<result name="openshixunplatform" type="redirectAction">/XueSheng/studentAction_listDirections</result>
+			<result name="openshixiplatform" type="dispatcher">/XueSheng/internship.jsp</result>
+			<result name="error" type="dispatcher">/XueSheng/noplatform.jsp</result>
+		</action>
+		<action name="adminAction_*" class="adminAction" method="{1}">
+			<result name="alterpwd" type="dispatcher">/GuanLiYuan/alterpassword.jsp</result>
+			<result name="addstudent" type="redirectAction">/GuanLiYuan/adminAction_listStudent</result>
+			<result name="liststudent" type="dispatcher">/GuanLiYuan/index.jsp</result>
+			<result name="seestudent" type="dispatcher">/GuanLiYuan/see-student.jsp</result>
+			<result name="go-alterstudent" type="dispatcher">/GuanLiYuan/alter-student.jsp</result>
+			<result name="modstudent" type="redirectAction">/GuanLiYuan/adminAction_listStudent</result>
+			<result name="delstudent" type="redirectAction">/GuanLiYuan/adminAction_listStudent</result>
+			
+			<result name="addteacher" type="redirectAction">/GuanLiYuan/adminAction_listTeacher</result>
+			<result name="listteacher" type="dispatcher">/GuanLiYuan/teacher-manage.jsp</result>
+			<result name="seeteacher" type="dispatcher">/GuanLiYuan/see-teacher.jsp</result>
+			<result name="go-alterteacher" type="dispatcher">/GuanLiYuan/alter-teacher.jsp</result>
+			<result name="modteacher" type="redirectAction">/GuanLiYuan/adminAction_listTeacher</result>
+			<result name="delteacher" type="redirectAction">/GuanLiYuan/adminAction_listTeacher</result>
+
+			<result name="addassistant" type="redirectAction">/GuanLiYuan/adminAction_listAssistant</result>
+			<result name="listassistant" type="dispatcher">/GuanLiYuan/assistant-manage.jsp</result>
+			<result name="seeassistant" type="dispatcher">/GuanLiYuan/see-assistant.jsp</result>
+			<result name="go-alterassistant" type="dispatcher">/GuanLiYuan/alter-assistant.jsp</result>
+			<result name="modassistant" type="redirectAction">/GuanLiYuan/adminAction_listAssistant</result>
+			<result name="delassistant" type="redirectAction">/GuanLiYuan/adminAction_listAssistant</result>
+			<result name="ownprofile" type="dispatcher">/GuanLiYuan/personprofile.jsp</result>
+
+			<result name="shixunlistgrade" type="dispatcher">/GuanLiYuan/shixun-platform.jsp</result>
+			<result name="addshixuntime" type="dispatcher">/GuanLiYuan/shixun-platform.jsp</result>
+			<result name="shixilistgrade" type="dispatcher">/GuanLiYuan/shixi-platform.jsp</result>
+			<result name="addshixitime" type="dispatcher">/GuanLiYuan/shixi-platform.jsp</result>
+	
+			<result name="newallgrade" type="dispatcher">/GuanLiYuan/a-new-session.jsp</result>
+			<result name="newsession" type="redirectAction">/GuanLiYuan/adminAction_searchAllGrade</result>
+		</action>
+		<action name="assistantAction_*" class="assistantAction"
+			method="{1}">
+			<result name="alterpwd" type="dispatcher">/FuDaoYuan/alterpassword.jsp</result>
+			<result name="listzj" type="dispatcher">/FuDaoYuan/zj-manage.jsp</result>
+			<result name="seezj" type="dispatcher">/FuDaoYuan/seezj.jsp</result>
+			<result name="modzj" type="dispatcher">/FuDaoYuan/zj-manage.jsp</result>
+			<result name="listzjhistory" type="dispatcher">/FuDaoYuan/zj-history.jsp</result>
+			<result name="ownprofile" type="dispatcher">/FuDaoYuan/personprofile.jsp</result>
+			<result name="listsbhistory" type="dispatcher">/FuDaoYuan/zj-history.jsp</result>
+			<result name="addinform" type="dispatcher">/FuDaoYuan/writenews.jsp</result>
+			<result name="listinform" type="dispatcher">/FuDaoYuan/index.jsp</result>
+			<result name="delinform" type="redirectAction">/FuDaoYuan/assistantAction_listInform</result>
+			<result name="seeinform" type="dispatcher">/FuDaoYuan/seenews.jsp</result>
+			<result name="go-alterinform" type="dispatcher">/FuDaoYuan/alternews.jsp</result>
+			<result name="modinform" type="redirectAction">/FuDaoYuan/assistantAction_listInform</result>
+			<result name="listshixunstudent" type="dispatcher">/FuDaoYuan/training-manage.jsp</result>
+			<result name="seeshixun" type="dispatcher">/FuDaoYuan/altertraining.jsp</result>
+			<result name="modshixun" type="dispatcher">/FuDaoYuan/altertraining.jsp</result>
+			<result name="listshixistudent" type="dispatcher">/FuDaoYuan/internship-manage.jsp</result>
+			<result name="seeshixi" type="dispatcher">/FuDaoYuan/internship-result.jsp</result>
+			<result name="modshixi" type="redirectAction">/FuDaoYuan/assistantAction_listShiXiStudent</result>
+			<result name="listshixihistory" type="dispatcher">/FuDaoYuan/internship-history.jsp</result>
+		</action>
+		
+		<action name="teacherAction_*" class="teacherAction" method="{1}">
+			<result name="alterpwd" type="dispatcher">/JiaoShi/alterpassword.jsp</result>
+			<result name="uploadfile" type="redirectAction">/JiaoShi/teacherAction_listRes</result>
+			<result name="listfile" type="dispatcher">/JiaoShi/index.jsp</result>
+			<result name="ownprofile" type="dispatcher">/JiaoShi/personprofile.jsp</result>
+			<result name="deletefile" type="redirectAction">/JiaoShi/teacherAction_listRes</result>
+			<result name="input" type="dispatcher">/JiaoShi/teacherAction_listRes</result>
+			<interceptor-ref name="uploadInterceptorStack"></interceptor-ref>
+		</action>
+		
+		<action name="downloadAction" class="downloadAction">
+			<!--设计文件名参数，有页面传入 -->
+			<result name="success" type="stream">
+				<!-- 文件类型名 vnd.ms-exceloctet-stream -->
+				<param name="contentType">application/octet-stream</param>
+				<!-- 下载方式 -->
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<!-- 定义下载文件输出流 -->
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+	</package>
+
+	<!-- Add packages here -->
+
+</struts>

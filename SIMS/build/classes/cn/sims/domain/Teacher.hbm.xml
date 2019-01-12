@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.sims.domain">
+	<class name="Teacher" table="sims_teacher">
+		<id name="id">
+			<generator class="native" />
+		</id>
+
+		<property name="name" column="name" type="string" />
+		<property name="sex" column="sex" type="string" />
+		<property name="age" column="age" type="integer" />
+		<property name="tel" column="tel" type="string" />
+		<property name="jobNum" column="jobNum" type="string" />
+		<property name="password" column="password" type="string" />
+		<property name="address" column="address" type="string" />
+		<property name="imgSrc" column="imgSrc" type="string" />
+
+		<set name="courses">
+			<key column="techerid"></key>
+			<one-to-many class="Course" />
+		</set>
+		<many-to-one name="grade" column="gradeid" class="Grade"></many-to-one>
+		<many-to-one name="direction" column="directionid" class="Direction"></many-to-one>
+		<many-to-one name="classes" column="classesid" class="Classes"></many-to-one>
+	</class>
+
+</hibernate-mapping>

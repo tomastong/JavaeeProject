@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/**
+ * @authors Tomastong (tobeyourhero@qq.com)
+ * @date    2014-06-20 10:04:24
+ * @version $Id$
+ */
+ .menu-left-nav{
+ 	list-style: none;
+ }
+ .menu-left-nav li{
+ 	padding: 3px 20px;
+ }
+ .menu-left-nav li:hover{
+	background-color: inherit;
+	border-radius: 4px;
+	max-width: 80px;
+	border: 1px #ccc solid; 
+ }
+ .menu-left-nav-container > h2{
+ 	margin-left: 20px;
+ 	margin-bottom: -5px; 
+ 	color: #505e7a;
+ }
+ .sidebar a{
+ 	text-decoration: none;
+ 	color: #1b9bda;
+ }

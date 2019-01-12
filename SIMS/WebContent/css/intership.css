@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2014-06-21 15:31:25
+ * @version $Id$
+ */
+ .radio-option, #apply-form-ip, #ps-info{
+ 	margin: 20px 40px;
+ }
+ .radio-option button{
+ 	margin-left: 20px;
+	padding: 5px;
+ }
+ #apply-form-ip input{
+	width: 300px;
+ }
+ #ps-info textarea{
+ 	width: 400px;
+ 	resize: none;
+ }

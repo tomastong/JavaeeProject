@@ -1,0 +1,100 @@
+@charset"UTF-8";
+
+/**
+ * @authors Tomastong (tobeyourhero@qq.com)
+ * @date    2014-06-20 10:35:51
+ * @version $Id$
+ */
+ .main-content article, .comment {
+    border-radius: 4px;
+    margin: 10px;
+    border: 1px #ccc solid;
+}
+.article-list {
+    margin-bottom: 10px;
+}
+.article-list li {
+    line-height: 1.5em;
+    margin-left: 40px;
+    list-style-image: url('../imgs/arrow.png');
+}
+.article-list a, .article-footer a, h2 span a {
+    color: #1b57b1;
+    text-decoration: none;
+    font-weight: normal;
+}
+.article-list a:hover, .article-footer a:hover, .main-content a:hover {
+    text-decoration: underline;
+}
+.main-content > article > h2 {
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+.article-footer {
+    margin-left: 70px;
+    margin-bottom: 15px;
+}
+time {
+    margin-left: 40px;
+}
+.main-content > article > h2 > span {
+    margin-left: 100px;
+    font-weight: normal;
+    font-size: 20px;
+}
+input, textarea, select {
+    font-family: Georgia, "Times New Roman", Times, "宋体" serif;
+    font-size: 16px;
+}
+button {
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #5bb75b;
+    display: inline-block;
+    padding: 4px 8px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.pagination {
+    margin: 10px 150px;
+}
+.pagination ul {
+    display: inline-block;
+    padding-left: 0;
+    margin: 30px 0 auto auto;
+    border-radius: 4px;
+}
+.pagination ul li {
+    list-style: none;
+    display: inline;
+}
+.pagination ul > li:first-child>a{
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.pagination ul >li:last-child>a{
+	border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.pagination .page-numbers{
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    color: #428bca;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.pagination .current {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #428bca;
+    cursor: default;
+}

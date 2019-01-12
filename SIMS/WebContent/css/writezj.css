@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Tomastong (tobeyourhero@qq.com)
+ * @date    2014-06-21 14:43:41
+ * @version $Id$
+ */
+ .zj-table{
+ 	margin: 20px 30px;
+ }
+ .zj-table textarea{
+	resize: none;
+	width: 500px;
+ }
+.zj-table input{
+	width: 300px;
+}

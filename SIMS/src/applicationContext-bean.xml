@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- - Application context definition for JPetStore's business layer. - Contains 
+	bean references to the transaction manager and to the DAOs in - dataAccessContext-local/jta.xml 
+	(see web.xml's "contextConfigLocation"). -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<bean id="abstractBean" abstract="true">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 这里我强调一下，通过继承HibernateDaoSupport类，需要动态注入sessionFactory，因为，这个类方法内部的需要， 
+		虽然在studentDao中，没有显性的调用sessionFactory，但是已经注入到HibernateDaoSupport中了 <bean id="studentDao" 
+		class="cn.dao.impl.StudentDaoHibernateDaoSupportImpl" parent="abstractBean"/> -->
+
+	<bean id="classesDao" class="cn.sims.dao.impl.ClassesDaoImpl"
+		parent="abstractBean" />
+	<bean id="courseDao" class="cn.sims.dao.impl.CourseDaoImpl"
+		parent="abstractBean" />
+	<bean id="gradeDao" class="cn.sims.dao.impl.GradeDaoImpl" parent="abstractBean" />
+	<bean id="postDao" class="cn.sims.dao.impl.PostDaoImpl" parent="abstractBean" />
+	<bean id="resourcesDao" class="cn.sims.dao.impl.ResourcesDaoImpl"
+		parent="abstractBean" />
+	<bean id="shixunDao" class="cn.sims.dao.impl.DirectionDaoImpl"
+		parent="abstractBean" />
+	<bean id="timeDao" class="cn.sims.dao.impl.TimeDaoImpl" parent="abstractBean" />
+	<bean id="shixiDao" class="cn.sims.dao.impl.InternshipDirectionDaoImpl"
+		parent="abstractBean" />
+	<bean id="studentDao" class="cn.sims.dao.impl.StudentDaoImpl"
+		parent="abstractBean" />
+	<bean id="informDao" class="cn.sims.dao.impl.InformDaoImpl"
+		parent="abstractBean" />
+	<bean id="zjDao" class="cn.sims.dao.impl.ZhouJiDaoImpl"
+		parent="abstractBean" />
+	<bean id="assistantDao" class="cn.sims.dao.impl.AssistantDaoImpl"
+		parent="abstractBean" />
+	<bean id="teacherDao" class="cn.sims.dao.impl.TeacherDaoImpl"
+		parent="abstractBean" />
+	<bean id="adminDao" class="cn.sims.dao.impl.AdminDaoImpl" parent="abstractBean" />
+
+	<bean id="adminService" class="cn.sims.services.impl.AdminServiceImpl">
+		<property name="adminDao" ref="adminDao" />
+		<property name="assistantDao" ref="assistantDao" />
+		<property name="teacherDao" ref="teacherDao" />
+		<property name="studentDao" ref="studentDao" />
+		<property name="timeDao" ref="timeDao" />
+	</bean>
+	<bean id="assistantService" class="cn.sims.services.impl.AssistantServiceImpl">
+		<property name="informDao" ref="informDao" />
+		<property name="shixiDao" ref="shixiDao" />
+		<property name="shixunDao" ref="shixunDao" />
+		<property name="zjDao" ref="zjDao" />
+		<property name="assistantDao" ref="assistantDao" />
+	</bean>
+	<bean id="teacherService" class="cn.sims.services.impl.TeacherServiceImpl">
+		<property name="teacherDao" ref="teacherDao" />
+	</bean>
+	<bean id="studentService" class="cn.sims.services.impl.StudentServiceImpl">
+		<property name="shixiDao" ref="shixiDao" />
+		<property name="shixunDao" ref="shixunDao" />
+		<property name="studentDao" ref="studentDao" />
+		<property name="timeDao" ref="timeDao" />
+		<property name="zjDao" ref="zjDao" />
+	</bean>
+	
+	
+	
+	
+	<bean id="classesService" class="cn.sims.services.impl.ClassesServiceImpl">
+		<property name="classesDao" ref="classesDao" />
+	</bean>
+	<bean id="courseService" class="cn.sims.services.impl.CourseServiceImpl">
+		<property name="courseDao" ref="courseDao" />
+	</bean>
+	<bean id="shixunService" class="cn.sims.services.impl.DirectionServiceImpl">
+		<property name="shixunDao" ref="shixunDao" />
+	</bean>
+	<bean id="gradeService" class="cn.sims.services.impl.GradeServiceImpl">
+		<property name="gradeDao" ref="gradeDao" />
+	</bean>
+	<bean id="informService" class="cn.sims.services.impl.InformServiceImpl">
+		<property name="informDao" ref="informDao" />
+	</bean>
+	<bean id="shixiService" class="cn.sims.services.impl.InternshipDirectionServiceImpl">
+		<property name="shixiDao" ref="shixiDao" />
+	</bean>
+	<bean id="postService" class="cn.sims.services.impl.PostServiceImpl">
+		<property name="postDao" ref="postDao" />
+	</bean>
+	<bean id="resourcesService" class="cn.sims.services.impl.ResourcesServiceImpl">
+		<property name="resourcesDao" ref="resourcesDao" />
+	</bean>
+	<bean id="timeService" class="cn.sims.services.impl.TimeServiceImpl">
+		<property name="timeDao" ref="timeDao" />
+	</bean>
+	<bean id="zjService" class="cn.sims.services.impl.ZhouJiServiceImpl">
+		<property name="zjDao" ref="zjDao" />
+	</bean>
+
+</beans>
